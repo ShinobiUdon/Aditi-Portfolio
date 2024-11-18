@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ash-gray: 202 210 197;
+    --cambridge-blue: 132 169 140;
+    --hookers-green: 82 121 111;
+    --dark-slate-gray: 53 79 82;
+    --charcoal: 47 62 70;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-charcoal;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 py-20 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold mb-8 text-charcoal;
+  }
+
+  .nav-link {
+    @apply text-dark-slate-gray hover:text-hookers-green transition-colors;
+  }
+
+  .project-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02] duration-300;
+  }
+}
